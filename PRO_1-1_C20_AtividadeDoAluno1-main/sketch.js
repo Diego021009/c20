@@ -11,8 +11,8 @@ var ground;
 var wedge;
 var angle=60;
 var poly;
-var solo;
-var bolinha;
+
+
 function setup() {
   
   createCanvas(400,400);
@@ -27,20 +27,15 @@ function setup() {
   var ground_options = {
     isStatic : true
   }
-var bolinha_options = {
-  restitution:0.75
-}
+
   
 
   ball = Bodies.circle(100,10,20,ball_options);
   World.add(world,ball);
-  bolinha = Bodies.circle(300,20,20,bolinha_options);
-  World.add(world,bolinha);
+
   ground = Bodies.rectangle(200,390,400,20,ground_options);
   World.add(world,ground);
-  solo = Bodies.rectangle(300,200,200,20,ground_options);
-  World.add(world,solo);
-
+  
   rectMode(CENTER);
   ellipseMode(RADIUS);
 }
@@ -53,7 +48,6 @@ function draw()
 
  ellipse(ball.position.x,ball.position.y,20);
  rect(ground.position.x,ground.position.y,400,20);
- rect(solo.position.x,solo.position.y,200,20);
- ellipse(bolinha.position.x,bolinha.position.y,20);
+  
 }
 
